@@ -21,6 +21,16 @@
 
             DateTime d6 = DateTime.UtcNow; // Horário do meridiano de Greenwich
             Console.WriteLine(d6);
+
+            DateTime d7 = DateTime.Parse("2000-08-15"); // Converter a data para esse formato
+            Console.WriteLine(d7);
+
+            DateTime d8 = DateTime.Parse("2000-08-15 13:05:58");
+            Console.WriteLine(d8);
+
+            DateTime d9 = DateTime.Parse("15/08/2000");  // Converter a data para esse formato
+            Console.WriteLine(d9);
+            
         }
 
     }
