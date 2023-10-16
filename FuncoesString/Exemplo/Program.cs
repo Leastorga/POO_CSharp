@@ -20,6 +20,7 @@
             string s7 = original.Replace("abc", "xy");
 
             bool b1 = String.IsNullOrEmpty(original); // Testa se o conteúdo da variável é nulo ou não
+            bool b2 = String.IsNullOrWhiteSpace(original); // Testa se o conteúdo o conteúdo é nulo ou não ou se está em branco.
 
             Console.WriteLine("Original: -" + original + "-");
             Console.WriteLine("ToUpper: -" + s1 + "-");
@@ -34,6 +35,7 @@
             Console.WriteLine("Replace(abc, xy): " + s7);
 
             Console.WriteLine("Is null ou not: " + b1);
+            Console.WriteLine("IsNulOrWhiteSpace: " + b2);
         }
     }
 }
