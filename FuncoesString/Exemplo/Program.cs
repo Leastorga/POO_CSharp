@@ -17,6 +17,7 @@
             string s5 = original.Substring(3, 5); // recorta o que estiver antes da posição x porém só y caracteres
 
             string s6 = original.Replace('a', 'x'); //  substituir todo caracter a por x;
+            string s7 = original.Replace("abc", "xy");
 
 
             Console.WriteLine("Original: -" + original + "-");
@@ -29,6 +30,7 @@
             Console.WriteLine("Subtring(3): "+ s4);
             Console.WriteLine("Subtring(3, 5): "+ s5);
             Console.WriteLine("Replace(a,x): " + s6);
+            Console.WriteLine("Replace(abc, xy): " + s7);
         }
     }
 }
