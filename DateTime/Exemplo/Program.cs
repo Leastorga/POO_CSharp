@@ -1,4 +1,6 @@
-﻿namespace Exemplo
+﻿using System.Globalization;
+
+namespace Exemplo
 {
     class Program
     {
@@ -22,7 +24,7 @@
             DateTime d6 = DateTime.UtcNow; // Horário do meridiano de Greenwich
             Console.WriteLine(d6);
 
-            DateTime d7 = DateTime.Parse("2000-08-15"); // Converter a data para esse formato
+            DateTime d7 = DateTime.Parse("2000-08-15"); // Converter a data para esse formato ( tentará interpretar a data em vários formatos)
             Console.WriteLine(d7);
 
             DateTime d8 = DateTime.Parse("2000-08-15 13:05:58");
@@ -30,6 +32,9 @@
 
             DateTime d9 = DateTime.Parse("15/08/2000");  // Converter a data para esse formato
             Console.WriteLine(d9);
+
+            DateTime dt  = DateTime.ParseExact("2000-08-15","yyyy-MM-dd", CultureInfo.InvariantCulture); // Especifico o formato exato em que a data estarão representadas na entrada
+            Console.WriteLine(dt);
             
         }
 
