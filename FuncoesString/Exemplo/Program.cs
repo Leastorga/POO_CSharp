@@ -14,6 +14,10 @@
             int n2 = original.LastIndexOf("bc"); // Procurar pela última ocorrência do bc
 
             string s4 = original.Substring(3); // recorta o que estiver antes
+            string s5 = original.Substring(3, 5); // recorta o que estiver antes da posição x porém só y caracteres
+
+            string s6 = original.Replace('a', 'x'); //  substituir todo caracter a por x;
+
 
             Console.WriteLine("Original: -" + original + "-");
             Console.WriteLine("ToUpper: -" + s1 + "-");
@@ -22,7 +26,9 @@
             Console.WriteLine("IndexOf('bc'):" + n1) ;
             Console.WriteLine("LastIndexOf('bc'):" + n2) ;
 
-            Console.WriteLine("Subtring: "+ s4);
+            Console.WriteLine("Subtring(3): "+ s4);
+            Console.WriteLine("Subtring(3, 5): "+ s5);
+            Console.WriteLine("Replace(a,x): " + s6);
         }
     }
 }
