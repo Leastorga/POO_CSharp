@@ -19,6 +19,7 @@
             string s6 = original.Replace('a', 'x'); //  substituir todo caracter a por x;
             string s7 = original.Replace("abc", "xy");
 
+            bool b1 = String.IsNullOrEmpty(original); // Testa se o conteúdo da variável é nulo ou não
 
             Console.WriteLine("Original: -" + original + "-");
             Console.WriteLine("ToUpper: -" + s1 + "-");
@@ -31,6 +32,8 @@
             Console.WriteLine("Subtring(3, 5): "+ s5);
             Console.WriteLine("Replace(a,x): " + s6);
             Console.WriteLine("Replace(abc, xy): " + s7);
+
+            Console.WriteLine("Is null ou not: " + b1);
         }
     }
 }
