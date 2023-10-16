@@ -9,6 +9,7 @@
             string s1 = original.ToUpper();
             string s2 = original.ToLower();
             string s3 = original.Trim(); // Apagar os espaços depois ou antes da string
+            
             int n1 = original.IndexOf("bc"); // Procurar pela primeira ocorrência do bc
             int n2 = original.LastIndexOf("bc"); // Procurar pela última ocorrência do bc
 
