@@ -14,7 +14,7 @@
 • TimeOfDay (TimeSpan) = Fornece o horário do dia (duração do dia)
 • Year (int) = Fornece o ano 
 
-# Algums funções
+# Algumas funções
 
 • ToLongDateString = Fornece o dia da semana e a data
 • ToLongTimeString = Fornece o horário
@@ -22,3 +22,17 @@
 • ToShortTimeString = Fornece o horário e o minuto
 • ToString = So converte para string
 • ToString(Mascara) = Fornece a data e horario de acordo com a mascara
+
+# Algumas Operações
+
+• DateTime y = x.Add(timeSpan);
+• DateTime y = x.AddDays(double);
+• DateTime y = x.AddHours(double);
+• DateTime y = x.AddMilliseconds(double);
+• DateTime y = x.AddMinutes(double);
+• DateTime y = x.AddMonths(int);
+• DateTime y = x.AddSeconds(double);
+• DateTime y = x.AddTicks(long);
+• DateTime y = x.AddYears(int);
+• DateTime y = x.Subtract(timeSpan);
+• TimeSpan t = x.Subtract(dateTime);
