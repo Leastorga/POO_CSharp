@@ -13,3 +13,10 @@
 - .TotalMinutes = Quantos minutos totais tem a duração
 - .TotalSeconds = Quantos segundos totais tem a duração
 - .TotalMilliseconds = Quantos milisegundos totais tem a duração
+
+# Operações do TimeSpan
+
+- t1.Add(t2) = Realiza a soma da duração dos dois
+- t1.Subtract(t2) = Realiza a subtração da duração do dois
+- t2.Multiply(2.0) = Realiza a multipliação pelo parâmetro
+- t2.Divide(2.0) = Realiza a divisão pelo parêmetro
