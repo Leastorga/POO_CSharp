@@ -40,7 +40,7 @@
             Console.WriteLine("d2 to Local: " + d2.ToLocalTime());
             Console.WriteLine("d2 to Utc: " + d2.ToUniversalTime());
             Console.WriteLine();
-            
+
             Console.WriteLine(d2.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"));
         }
     }
