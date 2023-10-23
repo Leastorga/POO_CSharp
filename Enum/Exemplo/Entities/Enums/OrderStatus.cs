@@ -2,10 +2,10 @@ namespace Exemplo.Entities.Enums
 {
     public enum OrderStatus : int
     {
-        PendingPayment,
-        Processing,
-        Shipped,
-        Delivered
+        PendingPayment, // = 0
+        Processing, // = 1
+        Shipped, // = 2
+        Delivered // = 3
 
     }
 }
