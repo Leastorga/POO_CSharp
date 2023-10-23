@@ -1,21 +1,20 @@
 using System.Diagnostics.Contracts;
+using System.Dynamic;
 using Exec01.Entities.Enums;
 
 namespace Exec01.Entities
 {
     public class Worker
     {
-
         public string Name { get; set; }
         public WorkerLevel Level { get; set; }
         public double BaseSalary { get; set; }
         public Department Department { get; set; }
-        public List<HourContract> Contracts { get; set; } = new List<HourContract>(); // Um Worker pode ter vários contracts
+        public List<HourContract> contracts = new List<HourContract>();
 
         public Worker()
         {
         }
-
         public Worker(string name, WorkerLevel level, double baseSalary, Department department)
         {
             Name = name;
@@ -24,20 +23,24 @@ namespace Exec01.Entities
             Department = department;
         }
 
-        public void AddContract(HourContract contract)
+
+        public void AddContracts(HourContract contract)
         {
-            Contracts.Add(contract);
-        }
-        public void RemoveContract(HourContract contract)
-        {
-            Contracts.Remove(contract);
+            contracts.Add(contract);
         }
 
-        public double Income(int year, int month){
+        public void RemoveContracts(HourContract contract)
+        {
+            contracts.Remove(contract);
+        }
+
+        public double Income(int year, int month)
+        {
             double sum = BaseSalary;
-            foreach (HourContract contract in Contracts)
+            foreach (HourContract contract in contracts) // Para cada contrato dentro da lista de contratos
             {
-                if (contract.Date.Year == year && contract.Date.Month == month){
+                if (contract.Date.Year == year || contract.Date.Month == month)
+                {
                     sum += contract.TotalValue();
                 }
             }

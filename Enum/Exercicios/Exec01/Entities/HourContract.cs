@@ -1,3 +1,5 @@
+using System.Dynamic;
+
 namespace Exec01.Entities
 {
     public class HourContract
@@ -9,11 +11,14 @@ namespace Exec01.Entities
         public HourContract(){
 
         }
-        public HourContract(DateTime date, double valuePerHour, int hours){
+
+        public HourContract(DateTime date, double valuePerHour, int hours)
+        {
             Date = date;
             ValuePerHour = valuePerHour;
             Hours = hours;
         }
+
         public double TotalValue(){
             return ValuePerHour * Hours;
         }
