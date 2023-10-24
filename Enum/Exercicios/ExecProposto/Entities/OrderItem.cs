@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,11 +30,11 @@ namespace ExecProposto.Entities
         {
             return Product.Name
             + ", $ "
-            + Price
+            + Price.ToString("F2", CultureInfo.InvariantCulture)
             + ", Quantity: "
             + Quantity
             + ", Subtotal: $"
-            + SubTotal();
+            + SubTotal().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
