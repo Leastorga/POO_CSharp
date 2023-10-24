@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Exec02.Entities
@@ -33,6 +34,20 @@ namespace Exec02.Entities
             Comments.Remove(comment);
         }
 
-        
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(Title);
+            sb.Append(Likes);
+            sb.Append(" Likes - ");
+            sb.AppendLine(Date.ToString("dd/MM/yyyy HH/mm/ss"));
+            sb.AppendLine(Content);
+            sb.AppendLine("Comments: ");
+            foreach (Comment c in Comments)
+            {
+                sb.AppendLine(c.Text);
+            }
+            return sb.ToString();
+        }
     }
 }
