@@ -24,6 +24,7 @@ namespace Exec01.Entities
         }
 
 
+
         public void AddContracts(HourContract contract)
         {
             contracts.Add(contract);
@@ -39,7 +40,7 @@ namespace Exec01.Entities
             double sum = BaseSalary;
             foreach (HourContract contract in contracts) // Para cada contrato dentro da lista de contratos
             {
-                if (contract.Date.Year == year || contract.Date.Month == month)
+                if (contract.Date.Year == year && contract.Date.Month == month)
                 {
                     sum += contract.TotalValue();
                 }

@@ -8,7 +8,7 @@ namespace Exec01.Entities
 
         }
         public Department(string name){
-            Name = Name;
+            Name = name;
         }
     }
 }
