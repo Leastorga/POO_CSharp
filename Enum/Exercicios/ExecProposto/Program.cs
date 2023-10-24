@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace  {
+namespace ExecProposto{
     class Program {
         static void Main(string[] args) {
 
