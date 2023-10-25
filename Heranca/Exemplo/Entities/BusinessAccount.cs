@@ -18,7 +18,7 @@ namespace Exemplo.Entities
             LoanLimit = loanLimit;
         }
 
-        public void Ioan(double amount)
+        public void Loan(double amount)
         {
             if (amount <= LoanLimit)
             {
