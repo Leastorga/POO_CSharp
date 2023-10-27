@@ -1,0 +1,24 @@
+
+using ExemploMetodoAbstrato.Entities.Enums;
+
+namespace ExemploMetodoAbstrato.Entities
+{
+    class Circle : Shape
+    {
+        public double Radius { get; set; }
+
+        public Circle()
+        {
+        }
+        public Circle(Color color, double radius) : base(color)
+        {
+            Radius = radius;
+        }
+
+        public override double Area()
+        {
+            return 3.1415 * Math.Pow(Radius, 2);
+        }
+
+    }
+}
