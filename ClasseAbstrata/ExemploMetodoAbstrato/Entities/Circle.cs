@@ -17,7 +17,7 @@ namespace ExemploMetodoAbstrato.Entities
 
         public override double Area()
         {
-            return 3.1415 * Math.Pow(Radius, 2);
+            return Math.PI * Math.Pow(Radius, 2);
         }
 
     }
