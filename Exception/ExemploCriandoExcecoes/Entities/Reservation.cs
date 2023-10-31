@@ -28,7 +28,7 @@ namespace ExemploCriandoExcecoes.Entities
 
             if (checkIn < now || checkOut < now)
             {
-                throw new DomainException("Reservation dates for update must bu future dates");
+                throw new DomainException("Reservation dates for update must be future dates");
             }
             if (checkOut <= checkIn)
             {
