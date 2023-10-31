@@ -36,13 +36,12 @@ namespace ExecFixacao.Entities
             {
                 throw new DomainException("The amount exceeds withdraw limit");
             }
-
-            Balance -= amount;
-            if (Balance < 0.0)
+            if (amount > Balance)
             {
                 throw new DomainException("Not enough balance");
             }
-
+            
+            Balance -= amount;
         }
     }
 }
