@@ -13,12 +13,16 @@ namespace UsandoDirectoryEDirectoryInfo
             {
                 // *.* qualquer nome de arquivo e 
                 // SearchOption.AllDirectories = Procurar todas as opções em todos os diretórios
-                var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                // var folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                DirectoryInfo folder = new DirectoryInfo(path);
+                var folders = folder.EnumerateDirectories("*.*", SearchOption.AllDirectories);
+
                 Console.WriteLine("FOLDERS:");
-                foreach (string item in folders)
+                foreach (DirectoryInfo item in folders)
                 {
                     Console.WriteLine(item);
                 }
+                Console.WriteLine("------------------------------------------------------------------------------");
 
                 var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
                 Console.WriteLine("FILES:");
