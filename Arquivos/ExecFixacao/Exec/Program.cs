@@ -2,6 +2,7 @@
 using System;
 using System.Globalization;
 using System.IO;
+using System.Reflection.Metadata;
 
 namespace Exec {
     class Program {
@@ -11,17 +12,15 @@ namespace Exec {
             string sourceFilePath = Console.ReadLine();
 
             try {
-
-                // Ler o conteúdo do arquivo
                 string[] lines = File.ReadAllLines(sourceFilePath);
 
                 string sourceFolderPath = Path.GetDirectoryName(sourceFilePath);
                 string targetFolderPath = sourceFolderPath + @"\out";
                 string targetFilePath = targetFolderPath + @"\summary.csv";
-                
+
                 Directory.CreateDirectory(targetFolderPath);
 
-                using(StreamWriter stream = File.AppendText(targetFilePath)){
+                using(StreamWriter sr = File.AppendText(targetFilePath)){
                     foreach (string line in lines)
                     {
                         string[] fields = line.Split(',');
@@ -30,12 +29,12 @@ namespace Exec {
                         double price = double.Parse(fields[1], CultureInfo.InvariantCulture);
                         int quantity = int.Parse(fields[2]);
 
-                        Product prod = new(name, price, quantity);
+                        Product product = new(name, price, quantity);
 
-                        stream.WriteLine(prod.Name + "," + prod.Total().ToString("F2", CultureInfo.InvariantCulture));
+                        sr.WriteLine(product.Name + "," + product.Total().ToString("F2", CultureInfo.InvariantCulture));
                     }
-                    Console.WriteLine("Total feito com sucesso!!!");
-                }
+                }   
+                Console.WriteLine("Feito com sucesso!");
             }
             catch (IOException e) {
                 Console.WriteLine("An error occurred");
