@@ -1,6 +1,7 @@
 ﻿
 using System.Globalization;
 using ExecFixacao.Entities;
+using ExecFixacao.Services;
 
 namespace ExecFixacao
 {
@@ -23,6 +24,14 @@ namespace ExecFixacao
             int months = int.Parse(Console.ReadLine());
 
             Contract myContract = new(number, date, value);
+            ContractService contract = new(new PayPalService());
+            contract.ProcessContract(myContract, months);
+
+            Console.WriteLine("INSTALLMENTS: ");
+            foreach (Installment item in myContract.Installments)
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }
