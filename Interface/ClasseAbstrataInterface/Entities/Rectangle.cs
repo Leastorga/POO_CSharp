@@ -1,18 +1,13 @@
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ClasseAbstrataInterface.Entities
 {
-    class Rectangle : IShape
+    class Rectangle : AbstractShape
     {
         public double Width { get; set; }
         public double Height { get; set; }
-        public AbstractShape Color { get; set; }
 
-        public double Area()
+        public override double Area()
         {
             return Width * Height;
         }

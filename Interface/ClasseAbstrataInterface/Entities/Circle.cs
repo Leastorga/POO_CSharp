@@ -7,16 +7,17 @@ using ClasseAbstrataInterface.Enums;
 
 namespace ClasseAbstrataInterface.Entities
 {
-    class Circle : IShape
+    class Circle : AbstractShape
     {
         public double Radius {get; set;}
-        public AbstractShape Color{get; set;}
 
-        public double Area(){
+        public override double Area(){
             return Math.PI  * Radius * Radius;
         }
 
-         public override string ToString()
+
+
+        public override string ToString()
         {
             return "Circle color = "
             + Color
@@ -25,5 +26,6 @@ namespace ClasseAbstrataInterface.Entities
             + ", Area = "
             + Area().ToString("F2", CultureInfo.InvariantCulture);
         }
+
     }
 }

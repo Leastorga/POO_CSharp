@@ -2,9 +2,9 @@ using ClasseAbstrataInterface.Enums;
 
 namespace ClasseAbstrataInterface.Entities
 {
-    abstract class AbstractShape
+    abstract class AbstractShape : IShape
     {
         public Color Color {get; set;}
-
+        public abstract double Area();
     }
 }
