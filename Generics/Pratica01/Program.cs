@@ -5,7 +5,7 @@ namespace Pratica01 {
     class Program {
         static void Main(string[] args) {
 
-            PrintService printService = new();
+            PrintService<int> printService = new();
 
             Console.Write("How many values? ");
             int number = int.Parse(Console.ReadLine());

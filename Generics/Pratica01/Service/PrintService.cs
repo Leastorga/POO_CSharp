@@ -1,17 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Pratica01.Service
 {
-    public class PrintService
+    public class PrintService <T>
     {
+        // Inicialmente esta classe lia apenas números inteiros, mas quero tornar o código reusável
        
-       private int[] _Values = new int[10];
+       private T[] _Values = new T[10];
        private int _Count = 0; // Anda pelo o vetor
 
-       public void AddValue(int value){
+       public void AddValue(T value){
         if(_Count == 10){
             throw new InvalidOperationException("PrintService is full.");
         }
@@ -19,7 +15,7 @@ namespace Pratica01.Service
         _Count ++;
        }
 
-       public int First(){
+       public T First(){
         if(_Count == 0){
             throw new InvalidOperationException("PrintService is empty.");
         }
